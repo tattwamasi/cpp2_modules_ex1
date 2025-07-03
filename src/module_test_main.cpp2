@@ -1,0 +1,6 @@
+import Example;
+
+main: () -> int = {
+    std::cout << "The answer is: " << Example_NS::f() << std::endl;
+    return 0;
+}

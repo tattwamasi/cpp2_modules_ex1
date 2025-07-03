@@ -1,0 +1,19 @@
+module;
+
+export module Example;
+
+#define ANSWER 42
+
+Example_NS: namespace =
+{
+    f_internal: () -> int = {
+        return ANSWER;
+    }
+
+    export f: () -> int = {
+        return f_internal();
+    }
+}
+
+// we have to put the export above rather than export as below, or we get "a type specifier is required for all declarations"
+//export Example_NS::f3;

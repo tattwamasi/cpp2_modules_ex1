@@ -1,0 +1,8 @@
+main: (args) = {
+    exe : _ = std::filesystem::path(args.argv[0]).filename().string();
+    std::cout
+        << "Hello, World!\n"
+        << "args.argc            is (args.argc)$\n"
+        << "args.argv[0]         is (exe)$\n"
+        ;
+}
