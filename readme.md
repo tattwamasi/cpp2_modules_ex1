@@ -13,5 +13,13 @@ Notes from the bleeding edge:
 * cppfront cmake from modern cmake, with PR #145 applied for module set errors.
 * cppfront module patch from Johel brought current but not yet fully reviewed nor broken into minimal PRs
 
+```zsh
+# get, cd into base proj dir where this readme is, then
+cmake -B build -G Ninja src
+# and assuming that is good
+cmake --build build
+```
+to make the example executables.
+
 Side comment:  The filename conventions don't quite work out right now.
 Cppfront checks for a `2` at the end of the suffix and just pulls it off for the default output file in some places, but checks to see if the extension is specifically `.cpp2` or `.h2` in others.  Meanwhile, modules with interface parts are .cppm in Clang, so .cppm2 would otherwise make sense for cpp2 files. It's not necessary though, and there are IXX extension, etc. so not sure if there's anything to really do or improve on with filename handling.
